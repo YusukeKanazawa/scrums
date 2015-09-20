@@ -1,0 +1,7 @@
+# Japanese strings go here for Rails i18n
+ja:
+  label_scrums: スクラム 
+  project_module_scrums: スクラム
+  permission_view_scrums: 閲覧 
+  permission_manage_scrums: 管理
+

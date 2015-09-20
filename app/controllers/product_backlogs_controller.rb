@@ -4,6 +4,7 @@ class ProductBacklogsController < ApplicationController
   before_filter :find_project, :authorize
 
   def index
+#    @product_backlogs = ProductBacklog.find(:all, :conditions => ["project_id = #{@project.id}"])
   end
 
   def new
