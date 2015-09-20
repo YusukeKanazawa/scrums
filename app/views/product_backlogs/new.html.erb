@@ -1,1 +1,4 @@
-<h2>ProductBacklogsController#new</h2>
+<%= labelled_form_for :product_backlog, @product_backlog, :url => project_product_backlogs_path(@project) do |f| %>
+  <%= render :partial => 'product_backlogs/form', :locals => {:form => f} %>
+  <%= f.submit l(:button_create) %>
+<% end %>

@@ -4,4 +4,7 @@ ja:
   project_module_scrums: スクラム
   permission_view_scrums: 閲覧 
   permission_manage_scrums: 管理
+  
+  label_product_backlogs_new: 新しいプロダクトバックログ
+  label_product_backlog: プロダクトバックログ
 

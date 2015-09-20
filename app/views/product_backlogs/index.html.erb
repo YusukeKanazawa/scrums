@@ -1,5 +1,27 @@
+<div class="contextual">
+  <%= link_to_if_authorized(l(:label_product_backlogs_new),
+    {:action => 'new', :project_id => @project},
+    :class => 'icon icon-add') %>
+</div>
+
 <h2> <%=h l :label_scrums %> </h2>
+
 <% if (@product_backlogs.blank?) %>
   <p class="nodata"><%= l(:label_no_data) %></p>
 <% else %>
+  <table class="list">
+    <thead>
+      <tr>
+        <th>#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @product_backlogs.each do |product_backlog| %>
+      <tr>
+        <td><%= product_backlog.id %></td> 
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
 <% end %>
