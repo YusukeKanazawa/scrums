@@ -1,21 +1,5 @@
 <h2> <%=h l :label_scrums %> </h2>
-
 <% if (@product_backlogs.blank?) %>
   <p class="nodata"><%= l(:label_no_data) %></p>
 <% else %>
-  <table class="list">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th><%=h l(:field_subjedct) %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @product_backlogs.each do |product_backlog| %>
-        <tr class="<%= cycle('odd', 'even') %>">
-          <td><%= product_backlog.id %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
 <% end %>
