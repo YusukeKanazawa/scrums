@@ -1,10 +1,13 @@
 # Japanese strings go here for Rails i18n
 ja:
   label_scrums: スクラム 
+  label_product_backlogs: プロダクトバックログ 
+  label_task_board: タスクボード
   project_module_scrums: スクラム
   permission_view_scrums: 閲覧 
   permission_manage_scrums: 管理
   
   label_product_backlogs_new: 新しいプロダクトバックログ
   label_product_backlog: プロダクトバックログ
+  field_sprint: スプリント
 

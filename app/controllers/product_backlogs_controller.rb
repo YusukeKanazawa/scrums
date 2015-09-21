@@ -4,7 +4,10 @@ class ProductBacklogsController < ApplicationController
   before_filter :find_project, :authorize
 
   def index
-    @product_backlogs = ProductBacklog.where(project_id: @project.id).all
+    @product_backlog_tracker = Tracker.find_by!(name: 'product_backlog')
+    @sprints = Version.where(project_id: @project.id).all
+    @product_backlogs = Issue.where(project_id: @project.id,
+      tracker_id: @product_backlog_tracker.id).group_by(&:fixed_version_id)
   end
 
   def new

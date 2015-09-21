@@ -9,5 +9,6 @@ Redmine::Plugin.register :scrums do
     permission :view_scrums, :product_backlogs => [:index, :show]
     permission :manage_scrums, :product_backlogs => [:new, :edit, :create, :update, :destroy, :preview], :require => :member
   end
-  menu :project_menu, :scrums, { :controller => 'product_backlogs', :action => 'index' }, :param => :project_id
+  menu :project_menu, :product_backlogs, { :controller => 'product_backlogs', :action => 'index' }, :param => :project_id
+  menu :project_menu, :task_board, { :controller => 'product_backlogs', :action => 'index' }, :param => :project_id
 end
