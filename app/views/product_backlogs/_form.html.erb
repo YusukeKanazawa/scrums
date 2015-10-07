@@ -1,6 +1,8 @@
 <%= error_messages_for 'product_backlog' %>
 
 <div class="box">
-  <p><%= form.text_area :content, :class => 'wiki-edit' %></p>
-  <%= wikitoolbar_for 'product_backlog_content' %>
+  <p><%= form.text_field :subject, :size => 100, :required => true %></p>
+  <p><%= form.text_field :estimated_hours, :size => 6 %></p>
+  <p><%= form.text_area :description, :class => 'wiki-edit' %></p>
+  <%= wikitoolbar_for 'product_backlog_description' %>
 </div>
